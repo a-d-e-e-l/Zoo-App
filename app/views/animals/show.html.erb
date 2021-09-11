@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @animal.name %>
+</p>
+
+<p>
+  <strong>Dob:</strong>
+  <%= @animal.dob %>
+</p>
+
+<p>
+  <strong>Purchase date:</strong>
+  <%= @animal.purchase_date %>
+</p>
+
+<p>
+  <strong>Weight:</strong>
+  <%= @animal.weight %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @animal.description %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @animal.animal_type %>
+</p>
+
+
+<h3>Foods</h3>
+
+<% @animal.foods.each do |food| %>
+ <p>Name: <%= food.name %></p>
+<% end %>
+
+<%= link_to "Edit", edit_animal_path(@animal) %> |
+<%= link_to "Back", animals_path %>

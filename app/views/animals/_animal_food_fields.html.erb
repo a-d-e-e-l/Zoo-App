@@ -1,0 +1,7 @@
+
+
+<div class=nested-fields>
+  <%= f.hidden_field :id %>
+  <%= f.select :food_id, options_from_collection_for_select(Food.all, :id, :name, f.object.food_id), {} %>
+ <%= link_to_remove_association "remove food", f %>
+</div>

@@ -1,0 +1,27 @@
+<%= form_with(model: animal_food) do |form| %>
+  <% if animal_food.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(animal_food.errors.count, "error") %> prohibited this animal_food from being saved:</h2>
+
+      <ul>
+        <% animal_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :animal_id %>
+    <%= form.number_field :animal_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :food_id %>
+    <%= form.number_field :food_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

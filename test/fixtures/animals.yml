@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  dob: 2021-09-11
+  purchase_date: 2021-09-11
+  weight: 1
+  description: MyText
+  type: 
+
+two:
+  name: MyString
+  dob: 2021-09-11
+  purchase_date: 2021-09-11
+  weight: 1
+  description: MyText
+  type: 
