@@ -72,6 +72,7 @@ class AnimalsController < ApplicationController
       :purchase_date,
       :weight, :description,
       :animal_type,
+      :employee_id, :room_id,
       animal_foods_attributes: [
         :food_id, :id, :_destroy,
       ],

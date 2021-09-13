@@ -12,7 +12,7 @@
 
 <p>
   <strong>Type:</strong>
-  <%= @room.type %>
+  <%= @room.room_type %>
 </p>
 
 <p>
@@ -20,5 +20,10 @@
   <%= @room.description %>
 </p>
 
-<%= link_to 'Edit', edit_room_path(@room) %> |
-<%= link_to 'Back', rooms_path %>
+
+<h3> Animals in this room </h3>
+<% @room.animals.each do |a| %>
+ <p><%= link_to a.name, animal_path(a) %> </p>
+<% end %>
+<%= link_to "Edit", edit_room_path(@room) %> |
+<%= link_to "Back", rooms_path %>

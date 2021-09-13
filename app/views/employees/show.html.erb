@@ -9,6 +9,12 @@
   <strong>Salary:</strong>
   <%= @employee.salary %>
 </p>
+<p>
+<strong>Animals:</strong>
+<% @employee.animals.each do |animal| %>
+ <p>Name: <%= animal.name %></p>
+<% end %>
+</p>
 
-<%= link_to 'Edit', edit_employee_path(@employee) %> |
-<%= link_to 'Back', employees_path %>
+<%= link_to "Edit", edit_employee_path(@employee) %> |
+<%= link_to "Back", employees_path %>

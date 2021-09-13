@@ -1,32 +1,33 @@
 <p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Name:</strong>
+<div class="bg-light p-5 rounded-lg m-3">
+  <h1 class="display-4">
+<p class="lead">
+  <h3>Name:</h3>
   <%= @animal.name %>
 </p>
 
-<p>
-  <strong>Dob:</strong>
+<p class="lead">
+  <h3>Dob:</h3>
   <%= @animal.dob %>
 </p>
 
-<p>
-  <strong>Purchase date:</strong>
+<p class="lead">
+  <h3>Purchase date:</h3>
   <%= @animal.purchase_date %>
 </p>
 
-<p>
-  <strong>Weight:</strong>
+<p class="lead">
+  <h3>Weight:</h3>
   <%= @animal.weight %>
 </p>
 
-<p>
+<p class="lead">
   <strong>Description:</strong>
   <%= @animal.description %>
 </p>
 
-<p>
-  <strong>Type:</strong>
+<p class="lead">
+  <h3>Type:</h3>
   <%= @animal.animal_type %>
 </p>
 
@@ -34,8 +35,12 @@
 <h3>Foods</h3>
 
 <% @animal.foods.each do |food| %>
- <p>Name: <%= food.name %></p>
+ <p class="lead">Name: <%= food.name %></p>
 <% end %>
 
-<%= link_to "Edit", edit_animal_path(@animal) %> |
-<%= link_to "Back", animals_path %>
+<h3>Emplyees:</h3>
+ <p class="lead">Name: <%= @animal.employee.name %></p>
+<hr class="my-4">
+<%= link_to "Edit", edit_animal_path(@animal),class:"btn btn-secondary" %>
+<%= link_to "Back", animals_path,class:"btn btn-dark" %>
+</div>

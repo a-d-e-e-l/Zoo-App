@@ -20,6 +20,10 @@
     <%= form.label :salary %>
     <%= form.number_field :salary %>
   </div>
+ <div class="field">
+   <%= form.label :animals, "Select Animal" %>
+   <%= form.select :animals, options_from_collection_for_select(Animal.all, :id, :name, form.object.animal_id), {} %>
+  </div>
 
   <div class="actions">
     <%= form.submit %>
