@@ -1,0 +1,4 @@
+  <div class="fields">
+    <%= f.label :id, "Select animal" %>
+    <%= f.select :id, options_from_collection_for_select(Animal.all, :id, :name, f.object.id) %>
+  </div>

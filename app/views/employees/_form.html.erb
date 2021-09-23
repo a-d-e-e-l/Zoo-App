@@ -20,9 +20,13 @@
     <%= form.label :salary %>
     <%= form.number_field :salary %>
   </div>
- <div class="field">
-   <%= form.label :animals, "Select Animal" %>
-   <%= form.select :animals, options_from_collection_for_select(Animal.all, :id, :name, form.object.animal_id), {} %>
+
+ <div class="field" id=animals>
+    <%= form.fields_for :animals do |animal_form| %>
+      <%= render "animal_fields", f: animal_form %>
+    <% end %>
+
+    <%= link_to_add_association "add animal", form, :animals %>
   </div>
 
   <div class="actions">
